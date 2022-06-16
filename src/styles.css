@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+.products{
+  background-color: antiquewhite;
+  height: 1000vh;
+  /* text-align: center; */
+  
+}
+.btn{
+  margin: 20px;
+  text-align: center;
+  align-content: center;
+}
+.img{
+  align-items: center;
+}

@@ -1,0 +1,13 @@
+<!-- <button class="btn btn-danger" (click)="onClick()">Electronic</button> -->
+<ul *ngFor="let data of electData">
+    <li *ngIf="data.category == 'electronic'">
+     <div class="card" style="background-color: rgb(233, 221, 221); width:30%; padding: 20px;">   
+          <span>Category : {{data['category']}}</span>
+          <span>Name : {{data['name']}}</span>  
+          <span>Price : {{data.price}} </span>
+          <span>Color :  {{data.color}}</span>
+          <span>Size :{{data.size}} </span>
+        </div>     
+    </li>
+
+</ul>
