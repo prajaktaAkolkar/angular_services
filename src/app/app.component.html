@@ -12,21 +12,23 @@
 <div class="products">
   
 <button class="btn btn-info"  *ngFor="let data of uniqueAges" (click)="onClick(data)" >{{data}}</button>
-<ul *ngFor="let data of productDet">
-  
-  <li>
-      <div class="card" style="background-color: rgb(233, 221, 221); width:30%; padding: 20px;">   
-        <div class="col-sm-4"><img [src]= "data['img']" alt="" class="img-responsive" style="max-height: 250px;"></div>
+
+<div class="row">
+
+  <div class="col-md-4 card" *ngFor="let data of productDet" style="background-color: rgb(233, 221, 221); width:30%; padding: 20px; margin: 2px;">   
+
+ 
+        <div><img [src]= "data.img" alt="" class="img-responsive" style="max-height: 250px;"></div>
            <span>Category : {{data['category']}}</span>
            <!-- <span> <img [src]= "data['img']" alt=""class="img-responsive" style="max-height: 80px;"></span> -->
            <span>Name : {{data['name']}}</span>  
            <span>Price : {{data.price}} </span>
            <span>Color :  {{data.color}}</span>
            <span>Size :{{data.size}} </span>
-         </div>  
-     </li>
-</ul>
+         <!-- </div>   -->
+  
 
+</div>
 </div>
 <!-- <div>
  <app-electronic *ngIf="elect == true"></app-electronic>

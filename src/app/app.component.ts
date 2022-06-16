@@ -1,5 +1,5 @@
 import { ThisReceiver } from '@angular/compiler';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {UserDataService} from './user-data.service';
 import {ProductDetailsService} from './product-details.service';
 @Component({
@@ -7,7 +7,7 @@ import {ProductDetailsService} from './product-details.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'service_pract';
   value:any;
   product:any;
@@ -24,6 +24,11 @@ export class AppComponent {
   //   this.value = userData.users();
   // }
   constructor(private prod : ProductDetailsService) {
+   
+    
+
+  }
+  ngOnInit(): void {
     this.product = this.prod.products();
     console.log(this.product)
     this.product.forEach((element: any) => this.value1.push(element.category));
@@ -34,8 +39,6 @@ export class AppComponent {
     }
     
     this.uniqueAges = this.value1.filter(unique)
-    
-
   }
 
   onClick(val:any){
